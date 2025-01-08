@@ -8,12 +8,12 @@
         Title="Liam and Noels Ticket Oasis" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <ListBox x:Name="lbx_Events" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="73,92,421,73" SelectionChanged="lbx_Events_SelectionChanged"/>
-        <ListBox x:Name="lbx_Tickets" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="410,92,48,73"/>
-        <TextBox x:Name="txtBx_Search" HorizontalAlignment="Left" Margin="226,63,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="153" Height="12" TextChanged="TextBox_TextChanged" FontSize="8"/>
+        <ListBox x:Name="lbx_Tickets" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="410,92,48,73" SelectionChanged="lbx_Tickets_SelectionChanged"/>
+        <TextBox x:Name="txtBx_Search" HorizontalAlignment="Left" Margin="214,57,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="165" Height="18" TextChanged="TextBox_TextChanged" FontSize="11"/>
         <Label x:Name="lbl_Events" Content="Events" HorizontalAlignment="Left" Margin="73,57,0,0" VerticalAlignment="Top" Height="30"/>
         <Label x:Name="lbl_Tickets" Content="Tickets" HorizontalAlignment="Left" Margin="410,57,0,0" VerticalAlignment="Top" Height="30"/>
-        <TextBox x:Name="txtBx_NumberOfTickets" HorizontalAlignment="Left" Margin="581,376,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="12" FontSize="8" TextChanged="TextBox_TextChanged"/>
-        <Button x:Name="btn_BookTickets" Content="Book" HorizontalAlignment="Left" Margin="712,376,0,0" VerticalAlignment="Top" Height="12" FontSize="8" Width="40"/>
-        <Label x:Name="lbl_NumberOfTickets" Content="Number of Tickets" HorizontalAlignment="Left" Margin="495,372,0,0" VerticalAlignment="Top" Height="20" FontSize="8" Width="81"/>
+        <TextBox x:Name="txtBx_NumberOfTickets" HorizontalAlignment="Left" Margin="552,380,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="141" Height="16" FontSize="8" TextChanged="TextBox_TextChanged"/>
+        <Button x:Name="btn_BookTickets" Content="Book" HorizontalAlignment="Left" Margin="706,380,0,0" VerticalAlignment="Top" Height="16" FontSize="8" Width="47" Click="btn_BookTickets_Click"/>
+        <Label x:Name="lbl_NumberOfTickets" Content="Number of Tickets" HorizontalAlignment="Left" Margin="450,375,0,0" VerticalAlignment="Top" Height="26" Width="96" FontSize="10"/>
     </Grid>
 </Window>

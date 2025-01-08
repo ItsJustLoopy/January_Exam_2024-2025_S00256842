@@ -70,5 +70,31 @@ namespace Liam_and_Noels_Ticket_Oasis
 
             lbx_Tickets.ItemsSource = selectedEvent.Tickets;
         }
+
+        private void lbx_Tickets_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Ticket selectedTicket;
+
+            selectedTicket = lbx_Tickets.SelectedItem as Ticket;
+
+
+        }
+
+        private void btn_BookTickets_Click(object sender, RoutedEventArgs e)
+        {
+            Ticket selectedTicket = lbx_Tickets.SelectedItem as Ticket;
+
+            int numberOfTicketsToBePurchased = int.Parse(txtBx_NumberOfTickets.Text.ToLower());
+
+            if (selectedTicket.AvailableTickets >= numberOfTicketsToBePurchased)
+            {
+                selectedTicket.AvailableTickets -= numberOfTicketsToBePurchased;
+                MessageBox.Show("Tickets have been purchased !");
+            }
+            else
+            {
+                MessageBox.Show("Not enough tickets available");
+            }
+        }
     }
 }
