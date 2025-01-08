@@ -53,7 +53,7 @@ namespace Liam_and_Noels_Ticket_Oasis
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            string search = txtBx_Search.Text;
         }
 
         private void lbx_Events_Selected(object sender, RoutedEventArgs e)
@@ -97,6 +97,11 @@ namespace Liam_and_Noels_Ticket_Oasis
             {
                 MessageBox.Show("Not enough tickets available");
             }
+        }
+
+        private void txtBx_Search_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Ran out of time to implement search functionality
         }
     }
 }

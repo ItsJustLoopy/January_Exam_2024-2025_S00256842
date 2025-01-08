@@ -9,7 +9,7 @@
     <Grid>
         <ListBox x:Name="lbx_Events" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="73,92,421,73" SelectionChanged="lbx_Events_SelectionChanged"/>
         <ListBox x:Name="lbx_Tickets" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="410,92,48,73" SelectionChanged="lbx_Tickets_SelectionChanged"/>
-        <TextBox x:Name="txtBx_Search" HorizontalAlignment="Left" Margin="214,57,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="165" Height="18" TextChanged="TextBox_TextChanged" FontSize="11"/>
+        <TextBox x:Name="txtBx_Search" HorizontalAlignment="Left" Margin="214,57,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="165" Height="18" TextChanged="TextBox_TextChanged" FontSize="11" KeyDown="txtBx_Search_KeyDown"/>
         <Label x:Name="lbl_Events" Content="Events" HorizontalAlignment="Left" Margin="73,57,0,0" VerticalAlignment="Top" Height="30"/>
         <Label x:Name="lbl_Tickets" Content="Tickets" HorizontalAlignment="Left" Margin="410,57,0,0" VerticalAlignment="Top" Height="30"/>
         <TextBox x:Name="txtBx_NumberOfTickets" HorizontalAlignment="Left" Margin="552,380,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="141" Height="16" FontSize="8" TextChanged="TextBox_TextChanged"/>
