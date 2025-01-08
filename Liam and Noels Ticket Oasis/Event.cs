@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Liam_and_Noels_Ticket_Oasis
 {
-    internal class Event : IComparable<Event>
+    public class Event : IComparable<Event>
     {
         // Properties
 
         public string Name { get; set; }
         public DateTime EventDate { get; set; }
+        public EventType TypeOfEvent { get; set; }
         public List<Ticket> Tickets { get; set; }
 
         public enum EventType
@@ -22,6 +24,14 @@ namespace Liam_and_Noels_Ticket_Oasis
         }
 
         //Constructors
+        public Event()
+        {
+            
+            Name = "Event";
+            EventDate = DateTime.Now;
+            EventType typeOfEvent = TypeOfEvent;
+            Tickets = new List<Ticket>();
+        }
 
         //Methods
 
@@ -39,6 +49,11 @@ namespace Liam_and_Noels_Ticket_Oasis
             {
                 return 0;
             }
+        }
+
+        public override string ToString()
+        {
+            return $"{Name} - {EventDate}";
         }
 
     }

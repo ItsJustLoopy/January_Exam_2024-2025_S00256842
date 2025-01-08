@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Liam_and_Noels_Ticket_Oasis"
         mc:Ignorable="d"
-        Title="Liam and Noels Ticket Oasis" Height="450" Width="800">
+        Title="Liam and Noels Ticket Oasis" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <ListBox x:Name="lbx_Events" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="73,92,421,73"/>
+        <ListBox x:Name="lbx_Events" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="73,92,421,73" SelectionChanged="lbx_Events_SelectionChanged"/>
         <ListBox x:Name="lbx_Tickets" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="410,92,48,73"/>
         <TextBox x:Name="txtBx_Search" HorizontalAlignment="Left" Margin="226,63,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="153" Height="12" TextChanged="TextBox_TextChanged" FontSize="8"/>
         <Label x:Name="lbl_Events" Content="Events" HorizontalAlignment="Left" Margin="73,57,0,0" VerticalAlignment="Top" Height="30"/>

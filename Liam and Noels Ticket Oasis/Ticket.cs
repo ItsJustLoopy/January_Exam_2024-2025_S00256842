@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Liam_and_Noels_Ticket_Oasis
 {
-    internal class Ticket
+    public class Ticket
     {
         // Properties
         public  string Name { get; set; }
@@ -14,11 +14,22 @@ namespace Liam_and_Noels_Ticket_Oasis
         public int AvailableTickets { get; set; }
 
         // Constructors
+        public Ticket() 
+        { 
+            Name = "Standard Ticket";
+            Price = 0.00m;
+            AvailableTickets = 0;
+        }
 
         // Methods
 
+        public override string ToString()
+        {
+            return $"{Name} - €{Price} [AVAILABLE - {AvailableTickets}]";
+        }
 
-        internal class VIPTicket : Ticket
+
+        public class VIPTicket : Ticket
         {
             // Properties
 
@@ -29,7 +40,20 @@ namespace Liam_and_Noels_Ticket_Oasis
 
             // Constructors
 
+            public VIPTicket()
+            {
+                Name = "VIP Ticket";
+                Price = 0.00m;
+                AdditionalExtras = "No extras";
+                AdditionalCost = 0.00m;
+                AvailableTickets = 0;
+            }
+
             // Methods
+            public override string ToString()
+            {
+                return $"{Name} - €{Price + AdditionalCost} ({AdditionalExtras}) [AVAILABLE - {AvailableTickets}]";
+            }
         }
     }
     
