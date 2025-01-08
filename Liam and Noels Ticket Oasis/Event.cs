@@ -16,7 +16,7 @@ namespace Liam_and_Noels_Ticket_Oasis
         public EventType TypeOfEvent { get; set; }
         public List<Ticket> Tickets { get; set; }
 
-        public enum EventType
+        public enum EventType 
         {
             Music,
             Comedy,

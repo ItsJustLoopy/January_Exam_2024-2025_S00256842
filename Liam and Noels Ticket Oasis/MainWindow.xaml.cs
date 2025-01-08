@@ -16,9 +16,7 @@ using System.Windows.Shapes;
 
 namespace Liam_and_Noels_Ticket_Oasis
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    // github repository link: 
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -28,6 +26,7 @@ namespace Liam_and_Noels_Ticket_Oasis
 
         public List<Event> CreateEvent()
         {
+            // Creates 2 events and adds one ticket and one VIPticket to each event
             Event OasisCrokePark = new Event() { Name = "Oasis Croke Park", EventDate = new DateTime(2025, 06, 20), TypeOfEvent = Event.EventType.Music };
             Event ElectricPicnic = new Event() { Name = "Electric Picnic", EventDate = new DateTime(2025, 08, 20), TypeOfEvent = Event.EventType.Music };
 
@@ -47,6 +46,7 @@ namespace Liam_and_Noels_Ticket_Oasis
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            // Loads the events into the listbox
             List<Event> events = CreateEvent();
             lbx_Events.ItemsSource = events;
         }
@@ -64,6 +64,7 @@ namespace Liam_and_Noels_Ticket_Oasis
 
         private void lbx_Events_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            // Loads the tickets for an event into the listbox when an event is selected
             Event selectedEvent;
 
             selectedEvent = lbx_Events.SelectedItem as Event;
@@ -82,6 +83,7 @@ namespace Liam_and_Noels_Ticket_Oasis
 
         private void btn_BookTickets_Click(object sender, RoutedEventArgs e)
         {
+            // Purchases tickets when the button is clicked, updates the available tickets appropriately
             Ticket selectedTicket = lbx_Tickets.SelectedItem as Ticket;
 
             int numberOfTicketsToBePurchased = int.Parse(txtBx_NumberOfTickets.Text.ToLower());
