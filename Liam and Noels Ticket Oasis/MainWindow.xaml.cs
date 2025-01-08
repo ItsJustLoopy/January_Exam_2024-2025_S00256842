@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 
 namespace Liam_and_Noels_Ticket_Oasis
 {
-    // github repository link: 
+    // github repository link: https://github.com/ItsJustLoopy/January_Exam_2024-2025_S00256842 
     public partial class MainWindow : Window
     {
         public MainWindow()
